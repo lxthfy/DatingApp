@@ -10,7 +10,6 @@ export class AccountService {
   private http = inject(HttpClient);
   baseUrl = 'https://localhost:5001/api/';
   currentUser = signal<User | null>(null);
-  // private accountService = inject(AccountService);
   
   login(model: any) {
     return this.http.post<User>(this.baseUrl + 'account/login', model).pipe (
